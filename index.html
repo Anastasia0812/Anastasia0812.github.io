@@ -1,55 +1,114 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--This is an html 5 document-->
+<!DOCTYPE html>
+<html>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      
-    <link rel="stylesheet" href="css/bt.css">
+<head>
+    <title>Here is my frist HTML</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Passero+One" rel="stylesheet">
+</head>
 
-    <title>Bootstrap Example:Web109-1</title>
-  </head>
-    
-  <body>
-      <div class="jumbotron jumbotron fluid text-center" style="background-color: grey">
-          <div class="container-fluid">
-          <h1 class=display-4>Bootstrap Example testing testing testing</h1>
-              <p>Window width: <span id="winwidth"></span></p>
-              <p class="lead">lead testing testing
-              </p>
+<body>
+    <div id="wrapper">
+        <!--put your main content here-->
+        <div id="banner">
+            <div class="container">
+                <h1>My frist HTML<h1>
+            </div>
         </div>
-      </div>
-      
-      <!--col-576-sm-768-md-992-lg-1200-xl-->
-      <div class="container">
-        <div class="row">
-            <div class=col-4 style="background-color: beige">DIV 1</div>
-            <div class=col-4 style="background-color: azure">DIV 2</div>
-            <div class=col-4 style="background-color: antiquewhite">DIV 3</div>
+        <div id="nav">
+            <div class="container">
+                <p>A navigator</p>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#course">Course</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+        <div id="content">
+            <div class="container">
+                <div id="about">
+                    <h1 class="enjoy-css">A&nbsp b&nbsp o&nbsp u&nbsp t</h1>
+                    <h1><u>about</u></h1>
+                    <h1><i>about</i></h1>
+                    <h1>about</h1>
+                    <h1>about</h1>
+                    <h1>about</h1>
+                    <h1>about</h1>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+                </div>
+                <div id="education">
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                    <h1>Education</h1>
+                </div>
+                <div id="experience">
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                    <h1>Experience</h1>
+                </div>
+                <div id="course">
+                    <h1>Course</h1>
+                    <div class="gallery">
+                        <a target="_blank" href="asset/site1.jpg">
+                          <img src="asset/site1.jpg" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">site1</div>
+                      </div>
+                      <div class="gallery">
+                        <a target="_blank" href="asset/site2.JPG">
+                          <img src="asset/site2.JPG" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">site2</div>
+                      </div>
+                      <div class="gallery">
+                        <a target="_blank" href="asset/site3.JPG">
+                          <img src="asset/site3.JPG" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">site3</div>
+                      </div>
+                      <div class="gallery">
+                        <a target="_blank" href="asset/site4.JPG">
+                          <img src="asset/site4.JPG" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">site4</div>
+                      </div>
+                </div>
+                <div id="publications">
+                    <h1>Publications</h1>
+                </div>
+            </div>
+        </div>
+        <div id="supporting">
+            <div class="container">
+                <p>More information</p>
+            </div>
+        </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-      
-    <script>
-        $(window).on('resize', function() {
-            var winw = $(window).width();
-            console.log(winw);
-            $("#winwidth").html(winw);
-        });
-    </script>
-      
+        <div id="footer">
+            <div class="container">
+                <p>Designed by Qian Jialian</p>
+            </div>
+        </div>
+    </div>
+</body>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    -->
-  </body>
 </html>
