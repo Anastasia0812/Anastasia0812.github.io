@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Combinations</title>
+    <style>
+        .sample-setting {
+            animation-name: bounce;
+            animation-duration: 4s;
+            /* or: Xms */
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+            /* or: normal */
+            animation-timing-function: ease-out;
+            /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+            animation-fill-mode: forwards;
+            /* or: backwards, both, none */
+            animation-delay: 2s;
+            /* or: Xms */
+        }
+
+        /* animation: test 1s 2s 3 alternate backwards */
+
+        .load-animate {
+            animation: load 1s 0s 5 normal forwards;
+            visibility: visible;
+        }
+
+        @keyframes load {
+            0% {
+                font-size: 14px;
+                /* 		transform: translateY(-30%); */
+            }
+
+            100% {
+                font-size: 18px;
+                /* 		transform: translateY(0%); */
+            }
+        }
+
+        #section1 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #section2 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #section3 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #section4 div:first-child {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-4.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height:100vh;background-color:royalblue">
+        <div class="text-center load-animate"
+            style="height:100px;width:100px;position:relative;top:50vh;left:50vw;color:white">
+            <p>LOADING...</p>
+        </div>
+    </div>
+
+    <div id="v1frame" style="height:1000vh">
+        <div class="sticky-top">
+            <video id="video1" src="https://web.cw.com.tw/climate-2020/deforestation/cover.mp4"
+                style="width:100vw;"></video>
+        </div>
+    </div>
+    <section class="container-fluid" style="display:flex;height:500px;background-color:royalblue; color:white;">
+        <div class="row" style="align-self:flex-end">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p>以往，是圖像或影像的長度決定讀者花多少時間來捲對它。圖片越長、讀者捲動的時間就越久，圖片越短則相反。影像則是使用者願意駐足觀看，那該則影像就會被看比較久。</p>
+                <p>但透過把影像或圖像作為背景或sticky-top，我便可以透過指定外部區塊元素height來決定讀者必須在捲動過程花多少時間觀看我這個影片或圖像。這意味著，透過捲動，就如同電影透過在時間軸的剪輯，我可以控制讀者必須要看我指定的內容多久。
+                </p>
+                <p>如下方的四張圖片，內部的區塊均設定為sticky-top，高度則為100vh；外部的區塊則設定為300vh。這意味著原本讀者只需要花100vh來捲過這張圖片，但在這樣的設計下，讀者必須花300vh的捲動來觀看一則圖片
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+    </section>
+    <section id="section1" style="height:300vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+    <section id="section2" style="height:300vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section id="section3" style="height:300vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section id="section4" style="height:300vh;">
+        <div class="sticky-top" style="height:100vh;"></div>
+    </section>
+
+    <section style="height:500px;background-color:gray"></section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var video1_pos = $("#video1").offset().top;
+            var video1_end = video1_pos + $("#v1frame").height() - $(window).height();
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                console.log(current_pos);
+                if (current_pos > video1_pos && current_pos < video1_end) {
+                    $("#video1")[0].play();
+                } else {
+                    $("#vidoe1")[0].pause();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
