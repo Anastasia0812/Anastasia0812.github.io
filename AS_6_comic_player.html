@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/tent_26fa.png">
+    <title>露營地選擇指南</title>
+
+    <style>
+        .slideanimate {
+            visibility: hidden;
+        }
+
+        .slide {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://animate.style/ -->
+    <div id="outer" style="width:100vw;background:linear-gradient(skyblue, MidnightBlue);height: 8000px">
+        <h1 style="text-align: center;letter-spacing:3px;padding-top:30px;color: whitesmoke;" class="sticky-top">露營地選擇安全指南</h1>
+        <img src="https://Anastasia0812.github.io/asset/camp01.png" class="img-fluid slideanimate" data-pos=1000
+            data-direction="fadeInUp" style="position:fixed;top:150px;width:100vw;">
+        <img src="https://Anastasia0812.github.io/asset/camp02.png" class="img-fluid slideanimate" data-pos=2000
+            data-direction="fadeInLeft" style="position:fixed;top:0px;width:100vw;">
+        <img src="https://Anastasia0812.github.io/asset/camp03.png" class="img-fluid slideanimate" data-pos=3000
+            data-direction="fadeIn" style="position:fixed;top:98px;width:100vw;">
+        <img src="https://Anastasia0812.github.io/asset/camp04.png" class="img-fluid slideanimate" data-pos=4000
+            data-direction="fadeInLeft" style="position:fixed;top:100px;width:100vw;">
+        <img src="https://Anastasia0812.github.io/asset/camp05.png" class="img-fluid slideanimate" data-pos=5000
+            data-direction="fadeIn" style="position:fixed;top: 100px;left:30px;width:100vw;">
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var winh = $(window).height();
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                $(".slideanimate").each(function () {
+                    if (scrolled > $(this).data("pos")) {
+                        $(this).addClass(
+                            "animate__animated slide animate__" + $(this).data("direction")
+                        );
+                    }
+                    if (scrolled == 0) {
+                        $(this).removeClass(
+                            "animate__animated slide animate__" + $(this).data("direction")
+                        );
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
