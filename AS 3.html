@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>第六市場</title>
+    <style>
+        #wideobj {
+            position:relative;
+            height: 100vh;
+            width: 1000vw;
+            left: 0px;
+            /*background-image: url("https://static01.nyt.com/newsgraphics/2016/07/14/france-attack-scroller/9ec6dcec7e22fffa81a21fb790ba566f2c6aee83/base-big.jpg");*/
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 1) 100%);
+        }
+
+        #first {
+            background-image: url("asset/2-0.jpeg");
+            min-height: 1200px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="container-fluid">
+        <div class="row" style="height: 700px;">
+            <div class="col-12"
+                style="color: white;background-color: rgba(0,0, 0,0.5);margin-top: 750px;padding-top: 43px;height: 200px;">
+                <h1 style="font-size:70px; text-align:center;">「第一家開在百貨公司的傳統菜市場」</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12" style="height: 800px;background-color:white;">
+        <div style="text-align: center;">
+            <h1 style="font-size: 30px;padding-top: 40px;">第六市場｜日常生活的昇華 從美好改變開始</h1>
+        </div>
+    </div>
+
+    <div style="height: 700vh;">
+        <div class="sticky-top">
+            <div id="wideobj">
+                <div id="horizontal">
+                    <img src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" style="height:100vh;float:left" />
+                    <img src="https://p4css.github.io/webScroll/assets/taipei-2.jpg" style="height:100vh;float:left" />
+                    <img src="https://p4css.github.io/webScroll/assets/taipei-3.jpg" style="height:100vh;float:left" />
+                    <img src="https://p4css.github.io/webScroll/assets/taipei-4.jpg" style="height:100vh;float:left" />
+                    <img src="https://p4css.github.io/webScroll/assets/taipei-5.jpg" style="height:100vh;float:left" />
+                </div>
+            </div>
+        </div>
+        /*<div style="height: 100vh;background-color: gray;"></div>*/
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script>
+            $(function () {
+                var doch = $(document).height();
+                var winw = $(window).width();
+                var winh = $(window).height();
+                var max_scroll = doch - winh;
+                var max_move = $("#wideobj").width() - winw;
+
+                $(window).scroll(function () {
+                    var current_pos = $(window).scrollTop();
+                    var new_left = current_pos / max_scroll * max_move * (-1);
+                    $("#wideobj").css("left", new_left);
+                });
+
+            });
+
+            /*$(document).ready(function () {
+                var max_scroll = $(document).height() - $(window).height();
+                var max_w = $("#horizontal").width() - $(window).width();
+                var h_pos = $("#horizontal").offset().top;
+                $(window).scroll(function () {
+                    var current_pos = $(window).scrollTop();
+                    if (current_pos > h_pos && current_pos < hframe_h) {
+                        var new_left = (-1 * max_w * (current_pos - h_pos)) / hframe_h;
+                        $("#horizontal").css({
+                            left: new_left
+                        });
+                    }
+                });
+            });*/
+        </script>
+</body>
+
+</html>
