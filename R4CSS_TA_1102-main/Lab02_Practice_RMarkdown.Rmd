@@ -1,0 +1,69 @@
+---
+title: "Lab02_Practice_RMarkdown"
+author: "錢嘉蓮 R09342025 新聞所碩一"
+date: "2022/02/27"
+output:
+  html_document:
+    number_sections: no
+    theme: united
+    highlight: tango
+    toc: yes
+    toc_float:
+      collapsed: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = 'hold', comment = '#>', error = TRUE)
+```
+
+## 作業目的：Markdown 語法學習
+
+這份作業希望能夠讓你熟習於撰寫 Markdown 語法，希望你能夠成為 Markdown 界的霸主，聽起來很厲害。
+
+請參考網路上的教學，你可以選擇仔細練習每個部份，或是有問題的時候再去查找上面的資源。緊接著就要開始寫第一份作業了，真是令人興奮！
+
+你可以隨時點擊 RStudio 上方的 Knit 按鈕輸出檔案並且預覽，也可以利用
+ [Markdown 線上編輯器](https://jbt.github.io/markdown-editor)看你的結果長得如何。
+
+## 作業: RMarkdown 語法練習
+
+
+### A. 資料新聞案例舉例
+
+請寫一段自我介紹、一段想用 R 做的事情，並以 Markdown 語法完成。
+
+介紹文必須包含底下者三種元素：字體加深、清單(lists)、連結(links)。此外，請你再額外挑選至少兩種元素，譬如說字體變斜, 插入圖片, 加入引用, etc.  
+
+因為重點是使用 Markdown 語法，因此字數不用多，200字~300字即可，全文段落在 2段~4段間，請練習如何在 Markdown 中分行與分段！
+
+請把結果貼在`#### 結果`下方。
+ 
+#### 結果
+[自我介紹照片](https://drive.google.com/file/d/17t4-vEQwJkt0GY4C0NBNCv6ainOy-muD/view?usp=sharing)
+
+* 我是新聞所碩二的錢嘉蓮，大學所學的專業是[新媒體暨傳播管理]（https://nmca.mcu.edu.tw/） 與 [廣告暨策略行銷]（http://web.adv.mcu.edu.tw/）， 具有**基礎的剪輯、繪圖、動畫製作能力**。對於傳播領域有強大的興趣，同時也想探索新的領域，因此研究所選擇了新聞專業進修。
+* 通過碩一一年的學習，發現傳統媒體正在向數位進行轉型，為迎合就業市場需求，希望可以多學習*網頁設計、資料探勘、資訊視覺化等相關課程*，提升自身的競爭力，同時希望這些能力可以輔助我更有效率的完成工作，這也是我修習這節課程的原因之一。
+* 通過學習R語言，希望可以**更有效率地完成資料挖掘爬梳工作**，期待將這項技能應用於資料新聞、數據新聞的撰寫，挖掘更多的新聞熱點。
+
+### B. R code chunk 練習
+
+#### B.01
+
+如先前所提，Rmarkdown 當中可以插入 code chunk，請參考 [RStudio 的教學](https://rmarkdown.rstudio.com/lesson-3.html)，在底下插入一段 code chunk，並在當中計算 `1+1` 的答案並將結果列印出來。
+```{r}
+1+1
+```
+
+#### B.02
+- 請解釋 chunk header 中參數 include = FALSE 會有什麼後果，並在底下加一段 include = FALSE 的 code chunk，一樣在裡面計算 `1+1` 的答案。
+
+```{r include = FALSE}
+1+1
+```
+- *代码和结果將不出现在完成的文件中。R Markdown 仍然运行块中的代码，并且结果可以被其他块使用。*
+
+- 請解釋 chunk header 中參數 echo = FALSE 會有什麼後果，並在底下加一段 echo = FALSE 的 code chunk，一樣在裡面計算 `1+1` 的答案。
+```{r echo = FALSE}
+1+1
+```
+- *不顯示代码，但结果可出现在完成的文件中。*

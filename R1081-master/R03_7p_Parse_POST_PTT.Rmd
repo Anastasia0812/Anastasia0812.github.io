@@ -1,0 +1,126 @@
+---
+title: "R03_7 Parse POST PTT"
+author: "Jilung Hsieh"
+date: "10/9/2019"
+output:
+  html_document:
+    highlight: zenburn
+    number_sections: yes
+    theme: cerulean
+    toc: yes
+    css: style.css
+editor_options:
+  chunk_output_type: inline
+---
+
+# loading packages
+```{r}
+library(tidyverse)
+library(httr)
+library(rvest)
+options(stringsAsFactors = F)
+```
+
+
+
+# Loading post list with links
+```{r}
+# Reading post link rds -> posts
+
+
+
+```
+
+
+# Getting one post for examining html structure
+```{r}
+# WLOG, getting the first post link as an example, assign to -> url
+
+
+# Getting back the article and parsing as html
+# Remember to send cookie
+
+
+
+
+# Verifying the doc by write_html() and browseURL()
+
+
+
+```
+
+
+# Parse one POST
+```{r}
+# Getting content by CSS selector
+
+
+
+# BETTER for the case, Getting content by XPath
+
+
+
+
+
+# Getting metadata
+
+
+
+
+
+# Combining data to a data frame
+# post.temp <- data_frame(url, pcontent, ptitle, pauthor, ptime)
+```
+
+
+# Using for-loop to get all posts
+```{r}
+
+# Create an empty data frame -> all_posts
+
+
+# for-loop
+
+
+
+
+
+
+
+
+
+```
+
+
+# Practice I. Crawling comments in the for-loop
+Modifying the for-loop content to scraping comments for each post. Each iteration of for-loop will scrape and parse multiple comments. Try to bind them together and store all comments in another data frame names "comments."
+
+```{r}
+
+```
+
+
+
+# Practice II. Cleaning variables
+- Converting posts timestamp to R datetime
+- Extracting id and nickname from the author field.
+```{r}
+
+```
+
+
+
+# Practice III. Writing to rds with timestamp
+- Saving posts by `write_rds()`
+- Using current time as part of file name.
+```{r}
+# Getting current time for file name -> current_time
+
+
+# Converting data type and writing rds
+
+
+```
+
+
+
